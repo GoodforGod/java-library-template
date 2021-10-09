@@ -47,17 +47,6 @@ test {
     }
 }
 
-tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
-    options.incremental = true
-    options.fork = true
-}
-
-java {
-    withJavadocJar()
-    withSourcesJar()
-}
-
 publishing {
     publications {
         mavenJava(MavenPublication) {
@@ -102,19 +91,22 @@ publishing {
     }
 }
 
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding("UTF-8")
+    options.incremental(true)
+    options.fork = true
+}
 
 check.dependsOn jacocoTestReport
 jacocoTestReport {
     reports {
-        xml.enabled(true)
+        xml.enabled true
         html.destination file("${buildDir}/jacocoHtml")
-    }
-}
-
-if (project.hasProperty("signing.keyId")) {
-    apply plugin: "signing"
-    signing {
-        sign publishing.publications.mavenJava
     }
 }
 
@@ -122,5 +114,12 @@ javadoc {
     options.encoding = "UTF-8"
     if (JavaVersion.current().isJava9Compatible()) {
         options.addBooleanOption("html5", true)
+    }
+}
+
+if (project.hasProperty("signing.keyId")) {
+    apply plugin: "signing"
+    signing {
+        sign publishing.publications.mavenJava
     }
 }
