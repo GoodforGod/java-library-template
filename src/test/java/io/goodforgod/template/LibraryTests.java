@@ -1,4 +1,5 @@
-package io.library;
+package io.goodforgod.template;
+
 
 /**
  * @author GoodforGod
