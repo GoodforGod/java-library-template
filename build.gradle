@@ -19,15 +19,6 @@ version = artifactVersion
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
-spotless {
-    java {
-        encoding("UTF-8")
-        importOrder()
-        removeUnusedImports()
-        eclipse("4.21.0").configFile("${projectDir}/codestyle.xml")
-    }
-}
-
 dependencies {
     implementation "org.jetbrains:annotations:22.0.0"
 
@@ -47,6 +38,15 @@ test {
     reports {
         html.enabled(false)
         junitXml.enabled(false)
+    }
+}
+
+spotless {
+    java {
+        encoding("UTF-8")
+        importOrder()
+        removeUnusedImports()
+        eclipse("4.21.0").configFile("${projectDir}/codestyle.xml")
     }
 }
 
