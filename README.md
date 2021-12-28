@@ -1,4 +1,4 @@
-# Java Library Project Template
+# Java Library Template
 
 Template for Java library.
 
