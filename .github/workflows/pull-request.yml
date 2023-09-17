@@ -6,12 +6,18 @@ on:
       - master
       - dev
 
+
+permissions:
+  checks: write
+  pull-requests: write
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: [ '17' ]
+        java: [ '11', '17' ]
     name: Pull Request against Java ${{ matrix.java }}
 
     steps:
@@ -37,3 +43,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      - name: Test Report
+        if: matrix.java == '17'
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        with:
+          files: |
+            **/test-results/**/*.xml

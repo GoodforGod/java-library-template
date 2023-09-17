@@ -14,3 +14,13 @@ Template for Java library.
 - .gitignore and .gitattributes for proper ignore and symbols check.
 - .editorconfig for simple configs code style and encoding UTF-8.
 - Proper Gradle and Gradle Wrapper configuration.
+
+## GitHub Actions
+
+Required Environment variables:
+- OSS_GITHUB_TOKEN - GitHub package release token with `package write & read permissions`.
+- OSS_USERNAME - OSS username.
+- OSS_PASSWORD - OSS password.
+- OSS_SIGNING_KEY - OSS signing key in ASCII armor.
+- OSS_SIGNING_PASSWORD - OSS key decrypt password.
+- SONAR_TOKEN - sonar token.
