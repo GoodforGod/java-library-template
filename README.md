@@ -1,6 +1,8 @@
 # java-library-template
 
-[![GitHub Action](https://github.com/goodforgod/java-library-template/workflows/Java%20CI/badge.svg)](https://github.com/GoodforGod/java-library-template/actions?query=workflow%3A%22Java+CI%22)
+[![Minimum required Java version](https://img.shields.io/badge/Java-11%2B-blue?logo=openjdk)](https://openjdk.org/projects/jdk/11/)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.goodforgod/java-library-template/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.goodforgod/java-library-template)
+[![GitHub Action](https://github.com/goodforgod/java-library-template/workflows/CI%20Master/badge.svg)](https://github.com/GoodforGod/java-library-template/actions?query=workflow%3A"CI+Master"++)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=GoodforGod_java-library-template&metric=coverage)](https://sonarcloud.io/dashboard?id=GoodforGod_java-library-template)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=GoodforGod_java-library-template&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=GoodforGod_java-library-template)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=GoodforGod_java-library-template&metric=ncloc)](https://sonarcloud.io/dashboard?id=GoodforGod_java-library-template)
